@@ -13,6 +13,9 @@ export class AppComponent {
   storeclick(){
     this.auth.getStore();
   }
+  addclick(id: String,vle: String){
+    this.auth.setStore(Number(id), vle);
+  }
   login() {
     this.auth.login();
   }

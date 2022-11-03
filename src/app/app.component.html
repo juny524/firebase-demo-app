@@ -3,5 +3,9 @@
     <span class="spacer"></span>
     <button mat-raised-button>ログイン</button>
     <button mat-raised-button (click)="storeclick()">ログ吐き</button>
+    <button mat-raised-button (click)="addclick(test_id.value, test_vle.value)">書き込み</button>
 
 </mat-toolbar>
+
+<input placeholder="id" type="number" id="test_id" required #test_id>
+<input placeholder="値" type="text" id="test_vle" required #test_vle>
