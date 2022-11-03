@@ -19,10 +19,13 @@ export class AuthService {
     const querySnapshot = await getDocs(collection(db, "testid"));
     querySnapshot.forEach((doc) => {
       console.log(`${doc.id} => ${doc.data()}`);
+      console.log(`${doc.get("id")}`);
+      console.log(`${doc.get("vle")}`);
+      
     });
-
-    
-
+  }
+  async getasync(){
+    alert("OKOKOK getasync");
   }
   login() {
 

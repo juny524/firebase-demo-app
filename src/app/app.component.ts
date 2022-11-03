@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { AuthService } from './services/auth.service';
-import { AuthService } from 'FirebaseStorage';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +10,9 @@ export class AppComponent {
   title = 'demo-app';
 
   constructor(private auth: AuthService) {}
+  storeclick(){
+    this.auth.getStore();
+  }
   login() {
     this.auth.login();
   }
